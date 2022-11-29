@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+.nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.nav a img{
+    height: 45px;
+    width: 45px;
+    padding: 10px;
+    margin-top: 2px;
+}
+.nav input
+{
+    border: solid rgba(128, 128, 128, 0.349);
+    
+    padding: 8px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 255, 0.267);
+    margin-bottom: 2px;
+   color: black;
+   font-size: larger;
+   font-family: Arial, Helvetica, sans-serif;
+}
