@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Linked In Web View</string>
+    <string name="url">https://www.linkedin.com/</string>
+</resources>
