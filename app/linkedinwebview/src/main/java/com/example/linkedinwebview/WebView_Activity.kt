@@ -22,27 +22,25 @@ class WebView_Activity : AppCompatActivity() {
         setContentView(R.layout.activity_web_view)
 
         web_view = findViewById(R.id.web_view)
-        web_view.scrollBarStyle=WebView.SCROLLBARS_OUTSIDE_OVERLAY
+        web_view.scrollBarStyle = WebView.SCROLLBARS_OUTSIDE_OVERLAY
         progress_bar = findViewById(R.id.progrerss_bar)
-        webSettings=web_view.settings
-        webSettings.useWideViewPort=true
-        webSettings.javaScriptEnabled=true
+        webSettings = web_view.settings
+        webSettings.useWideViewPort = true
+        webSettings.javaScriptEnabled = true
         webSettings.setSupportZoom(true)
-        if (savedInstanceState==null)
-        {
-            progress_bar.visibility= View.VISIBLE
+        if (savedInstanceState == null) {
+            progress_bar.visibility = View.VISIBLE
             web_view.loadUrl(getString(R.string.url))
 
         }
-        web_view.webViewClient=object :WebViewClient()
-        {
+        web_view.webViewClient = object : WebViewClient() {
             override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
-                progress_bar.visibility=View.VISIBLE
+                progress_bar.visibility = View.VISIBLE
                 super.onPageStarted(view, url, favicon)
             }
 
             override fun onPageFinished(view: WebView?, url: String?) {
-                progress_bar.visibility=View.GONE
+                progress_bar.visibility = View.GONE
                 super.onPageFinished(view, url)
 
             }
@@ -59,7 +57,7 @@ class WebView_Activity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        if(web_view.canGoBack())
+        if (web_view.canGoBack())
             web_view.goBack()
         super.onBackPressed()
     }

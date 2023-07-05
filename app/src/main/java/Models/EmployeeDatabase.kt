@@ -9,7 +9,7 @@ import androidx.room.RoomDatabase
 import java.time.chrono.HijrahChronology.INSTANCE
 
 @Database(entities = [Employee::class], version = 1, exportSchema = false)
-abstract class EmployeeDatabase:RoomDatabase() {
+abstract class EmployeeDatabase : RoomDatabase() {
     abstract fun employeeDao(): EmployeeDao
 
     companion object {

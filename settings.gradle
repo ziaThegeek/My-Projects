@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 rootProject.name = "Custom Application"
 include ':app'
 include ':app:linkedinwebview'
+include ':app:retrofittest'

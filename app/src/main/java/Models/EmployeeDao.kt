@@ -9,9 +9,11 @@ import androidx.room.Query
 @Dao
 interface EmployeeDao {
     @Query("SELECT * FROM EMPLOYEES")
-    fun getEmployess():LiveData<List<Employee>>
+    fun getEmployess(): LiveData<List<Employee>>
+
     @Insert
     fun insert(employee: Employee)
+
     @Delete
     fun delete(employee: Employee)
 
